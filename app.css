@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFE4E1; /* Baby Pink */
+    color: #4B0082; /* Mauve */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #FF69B4; /* Hot Pink */
+}
+
+button {
+    background-color: #FFB6C1; /* Light Pink */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FF69B4; /* Hot Pink */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #FFB6C1; /* Light Pink */
+    border-radius: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4B0082; /* Mauve */
+}
+
+div {
+    text-align: center;
+    padding: 20px;
+}

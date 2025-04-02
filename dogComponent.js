@@ -7,7 +7,7 @@ const DogComponent = () => {
     const fetchDogData = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://your-server-url/dog_info.php');
+            const response = await fetch('path/to/your/dog_info.php');
             const data = await response.json();
             setDogData(data);
         } catch (error) {
@@ -18,20 +18,19 @@ const DogComponent = () => {
     };
 
     return (
-        <div className="dog-component">
-            <button onClick={fetchDogData} disabled={loading}>
-                {loading ? 'Loading...' : 'Fetch Dog Breed'}
-            </button>
+        <div>
+            <button onClick={fetchDogData}>Fetch Dog Breed</button>
+            {loading && <p>Loading...</p>}
             {dogData && (
                 <div>
-                    <h1>{dogData.breed}</h1>
-                    <img src={dogData.image} alt={dogData.breed} style={{ maxWidth: '100%' }} />
+                    <h2>{dogData.breed}</h2>
+                    <img src={dogData.image} alt={dogData.breed} />
                     <p>{dogData.description}</p>
-                    <small>Fetched at: {dogData.fetched_at}</small>
+                    <p>Fetched at: {dogData.fetched_at}</p>
                 </div>
             )}
         </div>
     );
 };
 
-export default DogComponent;
+export default dogComponent;
